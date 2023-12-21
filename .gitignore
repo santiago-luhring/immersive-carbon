@@ -70,3 +70,11 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+
+# Do not upload your Bing Maps API Key
+/[Aa]ssets/[Rr]esources/MapSessionConfig.txt
+/[Aa]ssets/[Rr]esources/MapSessionConfig.txt.meta
+
+.DS_Store
+
