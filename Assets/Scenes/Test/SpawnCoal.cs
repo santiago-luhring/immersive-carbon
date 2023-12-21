@@ -5,15 +5,28 @@ using UnityEngine;
 public class SpawnCoal : MonoBehaviour
 {
     public Transform spawnPos;
-    public GameObject spawnee;
-    private int spawnable = 1000;
+    public GameObject spawneePrefab;
+    private int spawnable = 5000;
     private int spawned = 0;
-    // Update is called once per frame
+    public CollisionManager collisionManager;
+
     void Update()
     {
         if (spawnable >= spawned)
         {
-            Instantiate(spawnee, spawnPos.position, spawnPos.rotation);
+            // Introduce randomness to the spawn position
+            Vector3 randomOffset = new Vector3(Random.Range(-0.5f, -0.5f), Random.Range(-0.5f, -0.5f), Random.Range(-0.5f, -0.5f));
+            Vector3 spawnPosition = spawnPos.position + randomOffset;
+
+            // Instantiate the object at the modified spawn position
+            GameObject spawnedObject = Instantiate(spawneePrefab, spawnPosition, spawnPos.rotation);
+
+            // Register the spawned object with the CollisionManager
+            if (collisionManager != null)
+            {
+                collisionManager.RegisterObject(spawnedObject);
+            }
+
             spawned += 1;
         }
     }
