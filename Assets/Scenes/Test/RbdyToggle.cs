@@ -6,7 +6,7 @@ public class RbdyToggle : MonoBehaviour
 {
     private Rigidbody rb;
     private CollisionManager collisionManager;
-    public float delay = 1.0f;
+    public float delay = 0.5f;
 
     void Start()
     {
