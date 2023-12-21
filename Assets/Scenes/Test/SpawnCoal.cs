@@ -6,7 +6,7 @@ public class SpawnCoal : MonoBehaviour
 {
     public Transform spawnPos;
     public GameObject spawneePrefab;
-    private int spawnable = 5000;
+    private int spawnable = 5650;
     private int spawned = 0;
     public CollisionManager collisionManager;
 
