@@ -577,7 +577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPos: {fileID: 1533027577}
-  spawneePrefab: {fileID: 3388009586968432395, guid: 68c021eb4d35976458088482a53136f6, type: 3}
+  spawneePrefab: {fileID: 8101846828123283906, guid: 00cb62f44b99db04d8815456f5edbf9f, type: 3}
   collisionManager: {fileID: 1125888818}
   randomRangeX: 3
   randomRangeY: 0
