@@ -13,10 +13,18 @@ public class SpawnCoal : MonoBehaviour
     public float randomRangeX = 5f;
     public float randomRangeY = 5f;
     public float randomRangeZ = 5f;
+    private bool spawnEnabled = false; // Flag to control spawning
 
     void Update()
     {
-        if (spawnable >= spawned)
+        // Check for spacebar press to enable spawning
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            spawnEnabled = true;
+        }
+
+        // Check if spawning is enabled
+        if (spawnEnabled && spawnable >= spawned)
         {
             // Introduce randomness to the spawn position   
             Vector3 randomOffset = new Vector3(Random.Range(-randomRangeX, randomRangeX), Random.Range(-randomRangeY, randomRangeY), Random.Range(-randomRangeZ, randomRangeZ));
