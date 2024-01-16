@@ -15,13 +15,17 @@ public class SpawnCoal : MonoBehaviour
     public float randomRangeZ = 5f;
     private bool spawnEnabled = false; // Flag to control spawning
 
+    public void EnableSpawn()
+    {
+        spawnEnabled = true;
+    }
     void Update()
     {
         // Check for spacebar press to enable spawning
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            spawnEnabled = true;
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    spawnEnabled = true;
+        //}
 
         // Check if spawning is enabled
         if (spawnEnabled && spawnable >= spawned)
