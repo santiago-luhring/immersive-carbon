@@ -9,11 +9,22 @@ public class SpawnCoal : MonoBehaviour
     private int spawnable = 5650;
     private int spawned = 0;
     public CollisionManager collisionManager;
+    private DataLoader dataLoader; 
     
     public float randomRangeX = 5f;
     public float randomRangeY = 5f;
     public float randomRangeZ = 5f;
     private bool spawnEnabled = false; // Flag to control spawning
+
+    void Start()
+    {   
+        dataLoader = new DataLoader();
+        
+         List<Country> countryList = new List<Country>();
+         countryList = dataLoader.LoadData();
+         int rocks = dataLoader.getRockCount("EUA",3);
+         Debug.Log("AAAAAAAAAA " + rocks);
+    }
 
     public void EnableSpawn()
     {
