@@ -67,7 +67,7 @@ public class DataLoader : MonoBehaviour
         Debug.Log(value);
         float kilograms = value * 1000;
         Debug.Log(kilograms);
-        float rockCount = kilograms/100;
+        float rockCount = kilograms/10;
         Debug.Log(rockCount);
         return Mathf.RoundToInt(rockCount);
     }

@@ -7,15 +7,7 @@ public class CollisionManager : MonoBehaviour
     // List to keep track of all spawned objects
     private List<GameObject> spawnedObjects = new List<GameObject>();
 
-    void Start()
-    {
-        // Add your initialization code here if needed
-    }
 
-    void Update()
-    {
-        // Add your update code here if needed
-    }
 
     // Call this method to register spawned objects
     public void RegisterObject(GameObject obj)
@@ -23,6 +15,14 @@ public class CollisionManager : MonoBehaviour
         if (!spawnedObjects.Contains(obj))
         {
             spawnedObjects.Add(obj);
+        }
+    }
+
+    public void DeleteAllObjects()
+    {
+        foreach (GameObject obj in spawnedObjects)
+        {
+            Destroy(obj);
         }
     }
 

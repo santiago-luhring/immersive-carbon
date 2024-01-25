@@ -24,6 +24,7 @@ public class SpawnCoal : MonoBehaviour
 
     public void EnableSpawn()
     {
+        DeleteAllObjects();
         List<Country> countryList = new List<Country>();
          countryList = dataLoader.LoadData();
          int grana;
@@ -71,5 +72,7 @@ public class SpawnCoal : MonoBehaviour
 
             spawned += 1;
         }
+        if (spawnable <= spawned)
+            spawnEnabled = false;
     }
 }
