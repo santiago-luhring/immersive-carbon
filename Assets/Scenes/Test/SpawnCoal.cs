@@ -24,19 +24,20 @@ public class SpawnCoal : MonoBehaviour
 
     public void EnableSpawn()
     {
+        spawned = 0;
         collisionManager.DeleteAllObjects();
         List<Country> countryList = new List<Country>();
          countryList = dataLoader.LoadData();
          int grana;
          Debug.Log("income text: "+ income.text);
          switch(income.text){
-            case "low":
+            case "Low":
                 grana = 1;
                 break;
-            case "medium":
+            case "Medium":
                 grana = 2;
                 break;
-            case "high":
+            case "High":
                 grana = 3;
                 break;
             default:
