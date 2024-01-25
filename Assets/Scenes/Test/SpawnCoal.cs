@@ -1,33 +1,48 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class SpawnCoal : MonoBehaviour
 {
     public Transform spawnPos;
     public GameObject spawneePrefab;
     private int spawnable = 5650;
     private int spawned = 0;
+
+    public TextMeshProUGUI country;
+    public TextMeshProUGUI income;
     public CollisionManager collisionManager;
-    private DataLoader dataLoader; 
     
     public float randomRangeX = 5f;
     public float randomRangeY = 5f;
     public float randomRangeZ = 5f;
     private bool spawnEnabled = false; // Flag to control spawning
-
-    void Start()
-    {   
-        dataLoader = new DataLoader();
-        
-         List<Country> countryList = new List<Country>();
-         countryList = dataLoader.LoadData();
-         int rocks = dataLoader.getRockCount("EUA",3);
-         Debug.Log("AAAAAAAAAA " + rocks);
+    private DataLoader dataLoader;
+    void Start(){
+                dataLoader = new DataLoader();
     }
 
     public void EnableSpawn()
     {
+        List<Country> countryList = new List<Country>();
+         countryList = dataLoader.LoadData();
+         int grana;
+         switch(income.text){
+            case "low":
+                grana = 1;
+                break;
+            case "medium":
+                grana = 2;
+                break;
+            case "high":
+                grana = 3;
+                break;
+            default:
+                grana = 1;
+                break;
+         }
+         Debug.Log(grana);
+        spawnable = dataLoader.getRockCount(country.text, grana);
         spawnEnabled = true;
     }
     void Update()
