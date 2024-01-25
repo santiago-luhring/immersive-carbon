@@ -3603,12 +3603,32 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7995254796961694934, guid: 8512eb6b7ff558e45900391aaa64296f, type: 3}
+      propertyPath: minViewDegrees
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7995254796961694934, guid: 8512eb6b7ff558e45900391aaa64296f, type: 3}
+      propertyPath: referenceDirection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7995254796961694934, guid: 8512eb6b7ff558e45900391aaa64296f, type: 3}
+      propertyPath: fixedVerticalPosition
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7995254796961694934, guid: 8512eb6b7ff558e45900391aaa64296f, type: 3}
+      propertyPath: useFixedVerticalPosition
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7995254796961694934, guid: 8512eb6b7ff558e45900391aaa64296f, type: 3}
       propertyPath: orientToReferenceDirection
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7995254796961694935, guid: 8512eb6b7ff558e45900391aaa64296f, type: 3}
-      propertyPath: additionalOffset.x
+      propertyPath: trackedTargetType
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7995254796961694935, guid: 8512eb6b7ff558e45900391aaa64296f, type: 3}
+      propertyPath: additionalOffset.x
+      value: -1.04
       objectReference: {fileID: 0}
     - target: {fileID: 7995254796961694935, guid: 8512eb6b7ff558e45900391aaa64296f, type: 3}
       propertyPath: additionalOffset.z
