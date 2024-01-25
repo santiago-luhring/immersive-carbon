@@ -24,6 +24,7 @@ public class CollisionManager : MonoBehaviour
         {
             Destroy(obj);
         }
+        spawnedObjects.Clear();
     }
 
     // Handle collision globally

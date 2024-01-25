@@ -24,10 +24,11 @@ public class SpawnCoal : MonoBehaviour
 
     public void EnableSpawn()
     {
-        DeleteAllObjects();
+        collisionManager.DeleteAllObjects();
         List<Country> countryList = new List<Country>();
          countryList = dataLoader.LoadData();
          int grana;
+         Debug.Log("income text: "+ income.text);
          switch(income.text){
             case "low":
                 grana = 1;
@@ -42,7 +43,7 @@ public class SpawnCoal : MonoBehaviour
                 grana = 1;
                 break;
          }
-         Debug.Log(grana);
+         Debug.Log("income level: " + grana);
         spawnable = dataLoader.getRockCount(country.text, grana);
         spawnEnabled = true;
     }
@@ -72,7 +73,9 @@ public class SpawnCoal : MonoBehaviour
 
             spawned += 1;
         }
-        if (spawnable <= spawned)
+        if (spawnable <= spawned){
+            spawned = 0;
             spawnEnabled = false;
+        }
     }
 }
