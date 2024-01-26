@@ -2,6 +2,10 @@ using UnityEngine;
 
 public class CameraBlocker : MonoBehaviour
 {
+    void Update()
+    {
+        UnityEngine.XR.InputTracking.disablePositionalTracking = false;
+    }
     void LateUpdate()
     {
         float x = (float)-1.813124;
