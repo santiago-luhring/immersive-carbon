@@ -11,6 +11,7 @@ public class SpawnCoal : MonoBehaviour
 
     public TextMeshProUGUI country;
     public TextMeshProUGUI income;
+    public TextMeshProUGUI totalRocks;
     public CollisionManager collisionManager;
     
     public float randomRangeX = 5f;
@@ -73,6 +74,7 @@ public class SpawnCoal : MonoBehaviour
             }
 
             spawned += 1;
+            totalRocks.text = "Total rocks generated: " + spawned;
         }
         if (spawnable <= spawned){
             spawned = 0;
