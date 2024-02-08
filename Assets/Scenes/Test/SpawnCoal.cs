@@ -13,6 +13,9 @@ public class SpawnCoal : MonoBehaviour
     public TextMeshProUGUI income;
     public TextMeshProUGUI totalRocks;
     public CollisionManager collisionManager;
+
+    public SoundManager soundManager;
+    private bool TurnAudioOn = true;
     
     public float randomRangeX = 5f;
     public float randomRangeY = 5f;
@@ -93,13 +96,20 @@ public class SpawnCoal : MonoBehaviour
             {
                 collisionManager.RegisterObject(spawnedObject);
             }
+            if (TurnAudioOn)
+            {
+                soundManager.PlaySoundEffect();
+                TurnAudioOn = false;
+            }
 
             spawned += 1;
             totalRocks.text = "Generated CO2 in Kg: " + (spawned*10);
         }
         if (spawnable <= spawned){
+            soundManager.StopSoundEffect();
             spawned = 0;
             spawnEnabled = false;
+            TurnAudioOn = true;
         }
     }
 }
