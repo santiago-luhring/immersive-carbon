@@ -32,14 +32,35 @@ public class SpawnCoal : MonoBehaviour
          int grana;
          Debug.Log("income text: "+ income.text);
          switch(income.text){
-            case "Low":
+            case "Decile 1 (Lowest)":
                 grana = 1;
                 break;
-            case "Medium":
+            case "Decile 2":
                 grana = 2;
                 break;
-            case "High":
+            case "Decile 3":
                 grana = 3;
+                break;
+            case "Decile 4":
+                grana = 4;
+                break;
+            case "Decile 5":
+                grana = 5;
+                break;
+            case "Decile 6":
+                grana = 6;
+                break;
+            case "Decile 7":
+                grana = 7;
+                break;
+            case "Decile 8":
+                grana = 8;
+                break;
+            case "Decile 9":
+                grana = 9;
+                break;
+            case "Decile 10 (Highest)":
+                grana = 10;
                 break;
             default:
                 grana = 1;
