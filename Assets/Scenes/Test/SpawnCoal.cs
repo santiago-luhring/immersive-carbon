@@ -95,7 +95,7 @@ public class SpawnCoal : MonoBehaviour
             }
 
             spawned += 1;
-            totalRocks.text = "Total rocks generated: " + spawned;
+            totalRocks.text = "Generated CO2 in Kg: " + (spawned*10);
         }
         if (spawnable <= spawned){
             spawned = 0;
