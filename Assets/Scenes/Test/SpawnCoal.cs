@@ -61,7 +61,7 @@ public class SpawnCoal : MonoBehaviour
         if (spawnEnabled && spawnable >= spawned)
         {
             // Introduce randomness to the spawn position   
-            Vector3 randomOffset = new Vector3(Random.Range(-randomRangeX, randomRangeX), Random.Range(-randomRangeY, randomRangeY), Random.Range(-randomRangeZ, randomRangeZ));
+            Vector3 randomOffset = new Vector3(Random.Range(-randomRangeX, randomRangeX), 10, Random.Range(-randomRangeZ, randomRangeZ));
             Vector3 spawnPosition = spawnPos.position + randomOffset;
 
             // Instantiate the object at the modified spawn position
